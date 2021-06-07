@@ -1,0 +1,6 @@
+<button class=" NavButton " (mouseenter)="onHovered()" (mouseleave)="onHovered()">
+    <p [@hovered]="isHovered ? 'entered' : 'left'" class="TextContainer">
+        <ng-content></ng-content>
+    </p>
+  </button>
+  <div class="Seperator"></div>

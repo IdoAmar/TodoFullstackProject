@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --app-transition-time: 0.5s;
+}
+.darkTheme{
+    --app-darkgrey: #333333;
+    --app-grey: #555555;
+    --app-lightgrey:#aaaaaa ;
+
+    --app-accent:#ffa7b6;
+    --app-dark-accent: ;
+
+    --app-main-foreground:rgb(225, 225, 225);
+    --app-mid-foreground:rgb(156, 156, 156) ;
+    --app-sub-foreground:#1f1f1f ;
+}
+.lightTheme{
+    --app-darkgrey:rgb(185,185,185) ;
+    --app-grey:rgb(215, 215, 215) ;
+    --app-lightgrey: white;
+
+    --app-accent: blueviolet;	;
+    --app-dark-accent: ;
+    
+    --app-main-foreground:black;
+    --app-mid-foreground: rgb(73, 73, 73);
+    --app-sub-foreground: ;
+}
+
+html, body { 
+    height: 100%;
+    width: 100%;
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:100;
+    font-size: 32px;
+}
+
+.TextContainer{
+    padding-bottom: 0.25em;
+}

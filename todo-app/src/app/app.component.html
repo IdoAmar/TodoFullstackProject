@@ -1,0 +1,24 @@
+<div class="AppContainer" [ngClass]="themeToggle ? 'darkTheme' : 'lightTheme'">
+    <div class=" TitleBar">
+        <h1 class=" TitleText TextContainer">Todo App</h1>
+    </div>
+    <div class=" NavBar">
+        <div class=" FirstSeperator"></div>
+        <app-nav-button>
+            Home
+        </app-nav-button>
+        <app-nav-button>
+            Lists
+        </app-nav-button>
+        <app-nav-button>
+            Items
+        </app-nav-button>
+        <label class="ThemeToggler">
+            <input type="checkbox"  (click)="ToggleTheme()">
+            <span class="RoundSlider"></span>
+        </label>
+    </div>
+    <router-outlet>
+
+    </router-outlet>
+</div>
