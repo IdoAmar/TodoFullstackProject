@@ -4,11 +4,9 @@ export const textButtonHoverAnimationTrigger: AnimationTriggerMetadata[] = [
     trigger('hovered', [
         state('left', style({
             color: '*',
-            opacity: 1,
         })),
         state('entered', style({
             color: 'var(--app-accent)',
-            opacity: 1,
         })),
         transition('entered => left', [
             animate('0.2s')
@@ -17,4 +15,22 @@ export const textButtonHoverAnimationTrigger: AnimationTriggerMetadata[] = [
             animate('0.2s')
         ]),
     ]),
+];
+
+export const textButtonPressedAnimationTrigger: AnimationTriggerMetadata[] = [
+    trigger('pressed', 
+    [
+        state('released', style({
+            opacity:1,
+        })),
+        state('pressed', style({
+            opacity:0.6            
+        })),
+        transition('released => pressed', [
+            animate('0.05s')
+        ]),
+        transition('pressed => released',[
+            animate('0.05s')
+        ])
+    ])
 ]

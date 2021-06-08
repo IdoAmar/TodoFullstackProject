@@ -11,4 +11,12 @@ export class AppComponent {
   ToggleTheme(){
     this.themeToggle = !this.themeToggle;
   }
+//   onDocumentMouseUp(){
+//       console.log("this is a test");
+      
+//   }
+//   onDocumentMouseLeft(){
+//       console.log("this is a better test");
+      
+//   }
 }
