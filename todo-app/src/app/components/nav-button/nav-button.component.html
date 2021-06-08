@@ -1,10 +1,4 @@
-<button class=" NavButton " (mouseenter)="onMouseEntered()" (mouseleave)="onMouseLeft()"
-(mousedown)="OnMouseDown()" 
->
-    <p class="TextContainer" 
-        [@hovered]="isHovered ? 'entered' : 'left'" 
-        [@pressed]="isPressed ? 'pressed' : 'released'">
-        <ng-content></ng-content>
-    </p>
-  </button>
-  <div class="Seperator"></div>
+<button class=" NavButton TextContainer" appTextButtonAnimation>
+    <ng-content></ng-content>
+</button>
+<div class="Seperator"></div>

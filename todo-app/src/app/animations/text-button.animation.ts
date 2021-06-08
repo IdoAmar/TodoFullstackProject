@@ -1,4 +1,4 @@
-import { animation, style, animate, trigger, transition, useAnimation, state, AnimationTriggerMetadata } from '@angular/animations';
+import { animation, style, animate, trigger, transition, useAnimation, state, AnimationTriggerMetadata, AnimationMetadata } from '@angular/animations';
 
 export const textButtonHoverAnimationTrigger: AnimationTriggerMetadata[] = [
     trigger('hovered', [
@@ -18,19 +18,40 @@ export const textButtonHoverAnimationTrigger: AnimationTriggerMetadata[] = [
 ];
 
 export const textButtonPressedAnimationTrigger: AnimationTriggerMetadata[] = [
-    trigger('pressed', 
-    [
-        state('released', style({
-            opacity:1,
-        })),
-        state('pressed', style({
-            opacity:0.6            
-        })),
-        transition('released => pressed', [
-            animate('0.05s')
-        ]),
-        transition('pressed => released',[
-            animate('0.05s')
+    trigger('pressed',
+        [
+            state('released', style({
+                opacity: 1,
+            })),
+            state('pressed', style({
+                opacity: 0.6
+            })),
+            transition('released => pressed', [
+                animate('0.05s')
+            ]),
+            transition('pressed => released', [
+                animate('0.05s')
+            ])
         ])
-    ])
+]
+export const txtBtnHoverInAnimation: AnimationMetadata[] = [
+    animate('200ms' , style({
+        color: 'var(--app-accent)',
+    }))      
+];
+export const txtBtnHoverOutAnimation: AnimationMetadata[] = [
+    animate('200ms',  style({
+        color: 'var(--app-main-foreground)',
+    }))
+];
+
+export const txtBtnPressedInAnimation: AnimationMetadata[] = [
+    animate('80ms',style({
+        opacity: 0.6,
+    }))
+]
+export const txtBtnPressedOutAnimation: AnimationMetadata[] = [
+    animate('80ms',style({
+        opacity:1,
+    }))
 ]

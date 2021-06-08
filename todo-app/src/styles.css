@@ -3,9 +3,9 @@
     --app-transition-time: 0.5s;
 }
 .darkTheme{
-    --app-darkgrey: #333333;
-    --app-grey: #555555;
-    --app-lightgrey:#aaaaaa ;
+    --app-primary-high: #333333;
+    --app-primary-medium: #555555;
+    --app-primary-low:#aaaaaa ;
 
     --app-accent:#ffa7b6;
     --app-dark-accent: ;
@@ -15,22 +15,23 @@
     --app-sub-foreground:#1f1f1f ;
 }
 .lightTheme{
-    --app-darkgrey:rgb(185,185,185) ;
-    --app-grey:rgb(215, 215, 215) ;
-    --app-lightgrey: white;
+    --app-primary-high:rgb(185,185,185) ;
+    --app-primary-medium:rgb(215, 215, 215) ;
+    --app-primary-low: white;
 
     --app-accent: blueviolet;	;
     --app-dark-accent: ;
     
     --app-main-foreground:black;
     --app-mid-foreground: rgb(73, 73, 73);
-    --app-sub-foreground: ;
+    --app-sub-foreground: white;
 }
 
 html, body { 
     height: 100%;
     width: 100%;
  }
+ 
 *{
     margin: 0;
     padding: 0;

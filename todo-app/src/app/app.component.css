@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
-    background-color: var(--app-lightgrey);
+    background-color: var(--app-primary-low);
     transition: var(--app-transition-time);
 }
 .TitleBar{
@@ -17,11 +17,11 @@
     justify-content: center;
     align-content: center;
     grid-row: 1/2;
-    background-color: var(--app-darkgrey);
+    background-color: var(--app-primary-high);
     transition: var(--app-transition-time);
 }
 .NavBar{
-    background-color: var(--app-grey);
+    background-color: var(--app-primary-medium);
     display: flex;
     transition: var(--app-transition-time);
 }
