@@ -8,8 +8,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: repeat(3, auto) 1fr;
     background-color: var(--app-primary-low);
+    
+    
     transition: var(--app-transition-time);
 }
 .TitleBar{
@@ -38,6 +40,8 @@
     transition: var(--app-transition-time);
 
 }
+
+/* styling for theme toggler */
 .ThemeToggler{
     margin:20px;
     margin-left: auto;
@@ -80,3 +84,4 @@ input:checked + .RoundSlider:before {
     -ms-transform: translateX(16px);
     transform: translateX(16px);
   }
+  /* styling for theme toggler */

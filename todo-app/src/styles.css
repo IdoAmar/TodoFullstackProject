@@ -4,32 +4,52 @@
 }
 .darkTheme{
     --app-primary-high: #333333;
+    --app-primary-medium-high: #444444;
     --app-primary-medium: #555555;
+    --app-primary-medium-low:#888888;
     --app-primary-low:#aaaaaa ;
 
+    --app-accent-transparent:#ffa7b644 ;
     --app-accent:#ffa7b6;
     --app-dark-accent: ;
 
-    --app-main-foreground:rgb(225, 225, 225);
+    --app-nocontrast-white-foreground: rgb(225, 225, 225);
+    --app-contrast-foreground: white;
+
+    --app-main-foreground:rgb(235, 235, 235);
     --app-mid-foreground:rgb(156, 156, 156) ;
     --app-sub-foreground:#1f1f1f ;
+
+    --app-shadow-main: rgba(0, 0, 0, 0.8);
+    --app-shadow-sub: rgba(0, 0, 0, 0.7);
+
 }
 .lightTheme{
-    --app-primary-high:rgb(185,185,185) ;
-    --app-primary-medium:rgb(215, 215, 215) ;
-    --app-primary-low: white;
+    --app-primary-high:#9c9c9c;
+    --app-primary-medium-high: #9e9e9e;
+    --app-primary-medium:#d1d1d1;
+    --app-primary-medium-low: #e2e2e2 ;
+    --app-primary-low: #ffffff;
 
-    --app-accent: blueviolet;	;
+    --app-accent-transparent:#892be234;
+    --app-accent: #8a2be2;
     --app-dark-accent: ;
     
-    --app-main-foreground:black;
+    --app-nocontrast-white-foreground: #ffffff ;
+    --app-contrast-foreground: black;
+
+    --app-main-foreground:#000000;
     --app-mid-foreground: rgb(73, 73, 73);
-    --app-sub-foreground: white;
+    --app-sub-foreground: #ffffff;
+    
+    --app-shadow-main: rgba(0, 0, 0, 0.5);
+    --app-shadow-sub: rgba(0, 0, 0, 0.4);
 }
 
 html, body { 
     height: 100%;
     width: 100%;
+
  }
  
 *{

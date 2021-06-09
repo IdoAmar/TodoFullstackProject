@@ -1,0 +1,5 @@
+.GridContainer{
+    display: flex;
+    flex-wrap: wrap;
+    transition: 2s;
+}
