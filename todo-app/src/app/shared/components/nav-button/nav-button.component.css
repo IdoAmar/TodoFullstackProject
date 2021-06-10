@@ -1,0 +1,10 @@
+:host{
+    display: flex;
+}
+
+.Seperator{
+    margin: 3px;
+    border-left: 0.5px solid var(--app-mid-foreground);
+    transition:var(--app-transition-time);
+    /* rgb(156, 156, 156) */
+}

@@ -1,0 +1,61 @@
+:host{
+    width:200px;
+    height:180px;
+    display: flex;
+    margin:25px;
+}
+.Card{
+    align-self: center;
+    color: var(--app-nocontrast-white-foreground);
+    width: 200px;
+    height: 140px;
+
+    background-color: var(--app-primary-medium-high);
+
+    border: 5px solid rgb(102, 102, 102);
+    border-radius: 20px;
+    box-shadow: -7px 7px 7px 2px var(--app-shadow-main);
+    transition:0.4s;
+    /* box-shadow: -5px 1px 13px 10px black; */
+
+}
+.Card:hover{
+    height: 180px;
+    box-shadow: -10px 15px 12px 7px var(--app-shadow-sub);
+}
+
+.Card:hover .CardText{
+    transition: 0.4s;
+    color: var(--app-accent);
+}
+
+.Card:active{
+    opacity: 0.85;
+    transition: 0.2s;
+
+}
+.CardContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.IconContainer{
+    padding-top: 10px;
+    display: grid;
+    justify-self: flex-start;
+}
+.Icon{
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    width: fit-content;
+    font-size: 64px;
+    
+}
+.CardText{
+    justify-self: flex-end;
+    margin-bottom: 5px;
+}

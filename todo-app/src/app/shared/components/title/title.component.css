@@ -1,0 +1,16 @@
+.TitleBar{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-row: 1/2;
+    background-color: var(--app-primary-high);
+    transition: var(--app-transition-time);
+}
+.TitleText{
+    font-size:46px;
+    color: var(--app-main-foreground);
+    text-align: center;
+    display: inline-block; 
+    transition: var(--app-transition-time);
+
+}

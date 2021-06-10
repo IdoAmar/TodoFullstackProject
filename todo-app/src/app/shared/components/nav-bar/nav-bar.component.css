@@ -1,0 +1,14 @@
+
+.NavBar{
+    background-color: var(--app-primary-medium);
+    display: flex;
+    
+    transition: var(--app-transition-time);
+}
+
+.FirstSeperator{
+    margin: 2px;
+}
+.ThemeToggler{
+    margin-left: auto;
+}
