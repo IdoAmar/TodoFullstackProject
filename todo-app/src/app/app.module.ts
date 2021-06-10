@@ -8,10 +8,17 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { ListsModule } from './lists/lists.module';
 import { ItemsModule } from './items/items.module';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavButtonComponent } from './components/nav-button/nav-button.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
+    NavButtonComponent,
+    NavBarComponent,
+    TitleComponent
   
   ],
   imports: [

@@ -21,14 +21,14 @@ export class NavBarComponent implements OnInit {
       this.global.ChangeTheme();
   }
   onHomeButtonClicked(){
-      this.router.navigate(['/Home']);
+      this.router.navigate(['/home']);
   }
   onListsButtonClicked(){
-    this.router.navigate(['/Lists']);
+    this.router.navigate(['/lists']);
 
   }
   onItemsButtonClicked(){
-    this.router.navigate(['/Items']);
+    this.router.navigate(['/items']);
 
   }
 }

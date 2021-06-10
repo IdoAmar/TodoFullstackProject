@@ -5,10 +5,10 @@ import { ItemsPageComponent } from './items/pages/items-page/items-page.componen
 import { ListsPageComponent } from './lists/pages/lists-page/lists-page.component';
 
 const routes: Routes = [
-    {path:"Home",component: HomePageComponent, data: {animation:'HomePage'}},
-    {path:"Lists",component: ListsPageComponent, data : {animation : 'ListsPage'}},
-    {path:"Items",component: ItemsPageComponent, data : { animation: 'ItemsPage'}},
-    {path:'', redirectTo:'/Home', pathMatch: 'full'}
+    {path:"home",component: HomePageComponent, data: {animation:'HomePage'}},
+    {path:"lists",component: ListsPageComponent, data : {animation : 'ListsPage'}},
+    {path:"items",component: ItemsPageComponent, data : { animation: 'ItemsPage'}},
+    {path:'', redirectTo:'/home', pathMatch: 'full'}
 ];
 
 @NgModule({
