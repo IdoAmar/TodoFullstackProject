@@ -1,9 +1,23 @@
 <div class=" NavBar">
-    <div class=" FirstSeperator"></div>
+    <div class="FirstSeperator"></div>
 
-    <app-nav-button (click)="onHomeButtonClicked()" routerLink="/Home">Home</app-nav-button>
-    <app-nav-button (click)="onListsButtonClicked()">Lists</app-nav-button>
-    <app-nav-button (click)="onItemsButtonClicked()">Items</app-nav-button>
+    <app-text-button class="TextButton" (click)="onHomeButtonClicked()" routerLink="/Home">
+        Home
+    </app-text-button>
+
+    <div class="Seperator"></div>
+
+    <app-text-button class="TextButton" (click)="onListsButtonClicked()">
+        Lists
+    </app-text-button>
+
+    <div class="Seperator"></div>
+
+    <app-text-button class="TextButton" (click)="onItemsButtonClicked()">
+        Items
+    </app-text-button>
+
+    <div class="Seperator"></div>
 
     <app-toggler class="ThemeToggler" (TogglerClicked)="ThemeToggled()" ></app-toggler>
 </div>

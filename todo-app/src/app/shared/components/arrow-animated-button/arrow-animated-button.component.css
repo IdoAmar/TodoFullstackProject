@@ -9,8 +9,8 @@
     margin:7px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left:15px;
-    padding-right: 15px;
+    padding-left:10px;
+    padding-right: 10px;
     
     cursor: pointer;
     -webkit-touch-callout: none;
@@ -22,7 +22,7 @@
 }
 
 button > p{
-    font-size: 24px;
+    font-size: 22px;
     align-self: center;
 }
 .IconContainer{

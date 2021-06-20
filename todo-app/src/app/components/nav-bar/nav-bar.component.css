@@ -2,8 +2,11 @@
 .NavBar{
     background-color: var(--app-primary-medium);
     display: flex;
-    
     transition: var(--app-transition-time);
+}
+
+.TextButton{
+    padding-top: 3px;
 }
 
 .FirstSeperator{
@@ -11,4 +14,10 @@
 }
 .ThemeToggler{
     margin-left: auto;
+}
+.Seperator{
+    margin: 10px;
+    border-left: 0.5px solid var(--app-mid-foreground);
+    transition:var(--app-transition-time);
+    /* rgb(156, 156, 156) */
 }

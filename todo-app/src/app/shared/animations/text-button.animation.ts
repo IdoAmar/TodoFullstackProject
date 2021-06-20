@@ -22,3 +22,9 @@ export const txtBtnPressedOutAnimation: AnimationMetadata[] = [
         opacity:1,
     }))
 ]
+export const txtBtnDisabledInAnimation: AnimationMetadata[] = [
+    animate('80ms',style({
+        color:'var(--app-main-foreground)',
+        opacity:0.8,
+    }))
+]

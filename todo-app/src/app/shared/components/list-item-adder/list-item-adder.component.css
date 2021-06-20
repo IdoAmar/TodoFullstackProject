@@ -1,0 +1,34 @@
+:host{
+    display: flex;
+    background-color: var(--app-primary-medium-low);
+    border-bottom: 1px solid var(--app-main-foreground);
+}
+
+.Conatiner{
+    display: flex;
+    padding-left:10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--app-main-foreground);
+}
+
+.Icon{
+    align-self: center;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+input{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.AddButton{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: 24px;
+    font-family: "Material Icons";
+}

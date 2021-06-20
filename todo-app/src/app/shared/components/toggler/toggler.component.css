@@ -2,6 +2,7 @@
 /* styling for theme toggler */
 .ThemeToggler{
     margin:20px;
+    margin-left: 0px;
     position:relative;
     display: inline-block;
     width: 40px;

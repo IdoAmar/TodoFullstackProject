@@ -1,0 +1,36 @@
+:host{
+    display: flex;
+    background-color: var(--app-primary-medium-low);
+    border-bottom: 1px solid var(--app-main-foreground);
+}
+
+.ButtonContainer{
+    display: flex;
+    padding-left:10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--app-main-foreground);
+}
+
+.ButtonContainer:disabled{
+    color: var(--app-main-foreground) !important;
+}
+.DisabledItem{
+    -webkit-text-decoration-line: line-through; /* Safari */
+    text-decoration-line: line-through;
+    text-decoration-color: var(--app-warn-dark);
+
+}
+
+.Icon{
+    align-self: center;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.DisabledButton{
+    color: var(--app-main-foreground);
+}

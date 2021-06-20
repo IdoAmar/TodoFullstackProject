@@ -1,19 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
-    --app-transition-time: 0.5s;
+    --app-transition-time: 0.4s;
 }
 .darkTheme{
     --app-primary-high: #333333;
     --app-primary-medium-high: #444444;
     --app-primary-medium: #555555;
     --app-primary-medium-low:#888888;
-    --app-primary-low:#aaaaaa ;
+    --app-primary-low:#aaaaaa;
+    --app-primary-lower:#cccccc;
 
     --app-accent-transparent:#ffa7b644 ;
+    --app-accent-light:#ffb3c0;
     --app-accent:#ffa7b6;
-    --app-dark-accent: ;
+    --app-accent-dark:#ff8ea1 ;
 
-    --app-nocontrast-white-foreground: rgb(225, 225, 225);
+    --app-warn-dark:#b30000;
+    --app-warn: #cc0000;
+    --app-warn-light:#e60000;
+
+    --app-nocontrast-white-foreground: rgb(235, 235, 235);
     --app-contrast-foreground: white;
 
     --app-main-foreground:rgb(235, 235, 235);
@@ -30,11 +36,17 @@
     --app-primary-medium:#d1d1d1;
     --app-primary-medium-low: #e2e2e2 ;
     --app-primary-low: #ffffff;
+    --app-primary-lower:#ffffff;
 
     --app-accent-transparent:#892be234;
+    --app-accent-light:#9641e5;
     --app-accent: #8a2be2;
-    --app-dark-accent: ;
-    
+    --app-accent-dark: #701ac0;
+
+    --app-warn-dark: #ff0000;
+    --app-warn: #ff1a1a;
+    --app-warn-light: #ff3333;
+
     --app-nocontrast-white-foreground: #ffffff ;
     --app-contrast-foreground: black;
 
@@ -63,4 +75,179 @@ html, body {
 
 .TextContainer{
     padding-bottom: 0.25em;
+}
+/* overriding panel classes for google's material select */
+.iconsPanelClass{
+    margin-top: 1.75em;
+    margin-left: 0.5em;
+    padding: 0;
+    width: 70px;
+    height: fit-content;
+}
+.iconsPanelClass .mat-option , .colorsPanelClass .mat-option{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+}
+.iconsPanelClass .mat-option-text{
+    font-family:'Material Icons';
+    text-align: center;
+}
+
+.colorsPanelClass{
+    margin-top: 1.75em;
+    margin-left: 0.5em;
+    width: 220px;
+}
+.cdk-overlay-pane{
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+.cdk-overlay-container{
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+.cdk-live-announcer-element{
+    width: 0;
+    height: 0;
+}
+/* overriding panel classes for google's material select */
+
+
+/* overriding google's element styles */
+.mat-form-field-flex > .mat-form-field-infix { 
+    padding: 0px;
+    border:none;
+}
+
+.mat-form-field-label-wrapper {
+    padding: 0px;
+}
+
+ .mat-select-trigger {
+    min-width: fit-content;
+    padding: 5px;
+
+}
+
+.mat-select-panel {
+    min-width:fit-content !important;
+}
+
+.IconSelect .mat-select-min-line {
+    font-family:'Material Icons';
+}
+
+.mat-form-field-flex{
+    background-color: var(--app-primary-lower);
+}
+
+.mat-form-field-ripple {
+    background-color: var(--app-accent);
+}
+
+ .mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: var(--app-accent);
+}
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+    color: var(--app-accent);
+}
+
+ .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: var(--app-accent-dark);
+    background-color: var(--app-primary-medium-high);
+}
+.mat-form-field-underline {
+    bottom: 0 !important;
+}
+.mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+ .mat-select-min-line{
+    color:initial;
+    line-height: 1.3em;
+}
+.mat-select-value-text{
+    padding-bottom: 3px;
+}
+/* overriding google's element styles */
+
+/* Styling Input and Textarea */
+input, textarea{
+    padding:4px;
+    outline: none;
+    background-color: var(--app-primary-lower);
+    border: 2px solid transparent;
+    resize: none;
+    transition: 0.2s;
+    background-clip: padding-box;
+}
+input:hover , textarea:hover{
+    border: 2px solid rgba(0, 0, 0, 0.6);
+}
+input:focus, textarea:focus{
+    border: 2px solid black
+}
+/* Styling Input and Textarea */
+
+
+
+
+/* Button styles */
+.AnimatedButton{
+    background-color: var(--app-accent);
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    margin: 10px;
+    transition: 0.3s;
+    white-space: nowrap;
+    font-size: 32px;
+    color: var(--app-nocontrast-white-foreground)
+    
+}
+.AnimatedButton:hover:enabled{
+    background-color: var(--app-accent-light);
+
+}
+.AnimatedButton:active:enabled{
+    background-color: var(--app-accent-dark);
+}
+.AnimatedButton:disabled{
+    background-color: var(--app-accent-dark);
+    color: var(--app-mid-foreground)
+}
+/* Button styles */
+
+.WarnButton{
+    background-color: var(--app-warn);
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    padding-bottom: 10px;
+    margin: 10px;
+    transition: 0.3s;
+    white-space: nowrap;
+    font-size: 32px;
+    color: var(--app-nocontrast-white-foreground)
+    
+}
+.WarnButton:hover:enabled{
+    background-color: var(--app-warn-light);
+
+}
+.WarnButton:active:enabled{
+    background-color: var(--app-warn-dark);
+}
+.WarnButton:disabled{
+    background-color: var(--app-warn-dark);
+    color: var(--app-mid-foreground)
 }

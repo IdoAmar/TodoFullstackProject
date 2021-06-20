@@ -1,0 +1,47 @@
+<div class="MainContainer">
+
+
+    <div class="Container">
+        <label class="Label" for="Caption">Caption</label>
+        <input class="CaptionInput Caption TextContainer" type="text">
+    </div>
+
+    <div class="Container">
+        <label class="Label" for="Description">Description</label>
+        <textarea class="DescriptionTextArea Description TextContainer" type=""></textarea>
+
+    </div>
+
+    <!--  Icon and Color pickers -->
+    <div class="IconAndColorContainer">
+        <div class="SelectorContainer">
+            <label class="Label">Icons</label>
+            <mat-form-field class="FormField" style="width: 70px;">
+                <mat-select class="Select IconSelect TextContainer" disableOptionCentering panelClass="iconsPanelClass" disableRipple>
+                    <mat-option *ngFor="let icon of icons" [ngClass]="(_theme$|async)!" class="Option" value="test"
+                        style="font-size:15px;">
+                        {{icon}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="SelectorContainer">
+            <label class="Label">Colors</label>
+            <mat-form-field class="FormField" style="width: 220px">
+                <mat-select class="Select ColorSelect TextContainer" disableOptionCentering panelClass="colorsPanelClass"
+                    disableRipple>
+                    <mat-option *ngFor="let color of colors" [ngClass]="(_theme$|async)!" class="Option" value="test"
+                        style="font-size:15px;" [style.color]="color">
+                        {{color}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="SubmitButtonContainer">
+        <button class="AnimatedButton SubmitButton">
+            Create List
+        </button>
+    </div>
+    <!--  Icon and Color pickers -->
+</div>

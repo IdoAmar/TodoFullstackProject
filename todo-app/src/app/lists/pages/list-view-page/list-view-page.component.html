@@ -1,0 +1,12 @@
+<app-scroll-view>
+    <div class="ListViewContainer">
+        <app-list-view-widget>
+
+        </app-list-view-widget>
+        <div class="ItemsContainer">
+            <div class="Seperator"></div>
+            <app-list-item-ticker *ngFor="let item of itemsList">{{item}}</app-list-item-ticker>
+            <app-list-item-adder (newItemEvent)="onItemAdded($event)"></app-list-item-adder>
+        </div>
+    </div>
+</app-scroll-view>

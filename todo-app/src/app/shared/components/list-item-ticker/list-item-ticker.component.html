@@ -1,0 +1,9 @@
+<button appTextButtonAnimation class="ButtonContainer" [attr.disabled]="isDisabled ? '' : null" (click)="itemChecked()">
+    <mat-icon class="Icon">
+        {{currentIcon}}
+    </mat-icon>
+    <p [ngClass]="isDisabled? 'DisabledItem' : ''">
+        <ng-content></ng-content>
+    </p>
+
+</button>

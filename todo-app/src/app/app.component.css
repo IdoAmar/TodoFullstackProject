@@ -16,10 +16,6 @@
     transition: var(--app-transition-time);
 }
 
-.FirstSeperator{
-    margin: 2px;
-}
-
 .RouterContainer{
     display: grid;
     grid-template-rows: auto 1fr;

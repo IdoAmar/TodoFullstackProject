@@ -10,6 +10,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextButtonComponent } from './components/text-button/text-button.component';
 import { ThemeTogglerComponent } from './components/toggler/toggler.component';
+import {MatSelectModule} from '@angular/material/select';
+import { ListViewWidgetComponent } from './components/list-view-widget/list-view-widget.component';
+import { ListItemTickerComponent } from './components/list-item-ticker/list-item-ticker.component';
+import { ListItemAdderComponent } from './components/list-item-adder/list-item-adder.component';
 
 
 
@@ -22,12 +26,15 @@ import { ThemeTogglerComponent } from './components/toggler/toggler.component';
     ShortcutButtonComponent,
     TextButtonComponent,
     ThemeTogglerComponent,
+    ListViewWidgetComponent,
+    ListItemTickerComponent,
+    ListItemAdderComponent,
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     MatIconModule,
-
+    MatSelectModule
   ],
   exports:[
     TextButtonAnimationDirective,
@@ -36,8 +43,11 @@ import { ThemeTogglerComponent } from './components/toggler/toggler.component';
     ScrollViewComponent,
     ShortcutButtonComponent,
     TextButtonComponent,
-    ThemeTogglerComponent
-
+    ThemeTogglerComponent,
+    ListViewWidgetComponent,
+    MatSelectModule,
+    ListItemTickerComponent,
+    ListItemAdderComponent,
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,38 @@
+<div class="WidgetActiveContainer">
+
+    <div class="TextAndIconContainer">
+        <mat-icon class="Icon">
+            shopping_cart
+        </mat-icon>
+        <p *ngIf="!deletePressed;else deleteMessage" class="DescriptionText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloribus itaque dolorem minus unde! Velit, pariatur architecto.
+        </p>
+        <ng-template #deleteMessage>
+            <p class="DeleteMessage">
+                Are you sure you want to delete the entire list?
+            </p>
+        </ng-template>
+    </div>
+
+    <div *ngIf="!deletePressed;else deleteButtons" class="ButtonsContainer">
+        <app-arrow-animated-button class="Button" (click)="NewListPressed()">
+            New List
+        </app-arrow-animated-button>
+        <app-arrow-animated-button class="Button">
+            Edit
+        </app-arrow-animated-button>
+        <app-arrow-animated-button class="Button" (click)="DeletePressed()">
+            Delete
+        </app-arrow-animated-button>
+    </div>
+    <ng-template #deleteButtons>
+       <div class="ButtonsContainer">
+        <button class="AnimatedButton" (click)="CancelPressed()">
+            Cancel
+        </button>
+        <button class="WarnButton">
+            Delete
+        </button>
+    </div>
+    </ng-template>
+</div>

@@ -1,0 +1,103 @@
+:host{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    background-color: var(--app-primary-medium-low);
+    transition: var(--app-transition-time);
+    width: 70%;
+    height: 70%;
+    min-width: 360px;
+    min-height: 490px;
+    max-width: 450px;
+    max-height: 490px;
+    border-radius: 10px;
+}
+
+.CaptionInput{
+    height: 40px;
+    margin: 8%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 32px;
+    width: 84%;
+}
+
+.DescriptionTextArea{
+    margin: 8%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 32px;
+    width: 84%;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.IconAndColorContainer{
+    display: flex;
+    justify-content:space-between;
+    align-content: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-bottom: 20px;
+}
+
+.SelectorContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.Label{
+    color: var(--app-main-foreground);
+    justify-self: center;
+    align-self: center;
+    font-size: 32px;
+    transition: var(--app-transition-time);
+}
+
+.Select, .FormField{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.Option{
+    border:none;
+    outline: none;
+    padding: 0;
+    margin: 0; 
+    background-color: var(--app-primary-lower);
+    transition: var(--app-transition-time);
+}
+
+.Option:hover{
+    color: var(--app-accent);
+    background-color: var(--app-primary-medium);
+}
+*{
+    font-size: 10px;
+}
+.mat-option{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.SubmitButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.SubmitButton{
+    font-size: 32px;
+}
