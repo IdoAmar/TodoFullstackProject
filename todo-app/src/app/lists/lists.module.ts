@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ListEditPageComponent } from './pages/list-edit-page/list-edit-page.component';
 import { ListEditFormComponent } from './components/list-edit-form/list-edit-form.component';
 import { ListViewPageComponent } from './pages/list-view-page/list-view-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,11 +14,13 @@ import { ListViewPageComponent } from './pages/list-view-page/list-view-page.com
       ListsPageComponent,
       ListEditPageComponent,
       ListEditFormComponent,
-      ListViewPageComponent
+      ListViewPageComponent,
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
+
   ],
   exports: [
       ListsPageComponent

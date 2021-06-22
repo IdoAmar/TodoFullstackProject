@@ -4,6 +4,11 @@
     height: 100%;
 }
 
+.ng-invalid.ng-touched:not(form)  {
+    border: 2px solid var(--app-warn); /* red */
+  }
+  
+
 .MainContainer{
     display: flex;
     flex-direction: column;
@@ -11,13 +16,14 @@
     align-self: center;
     background-color: var(--app-primary-medium-low);
     transition: var(--app-transition-time);
-    width: 70%;
-    height: 70%;
+    min-height:fit-content;
     min-width: 360px;
-    min-height: 490px;
     max-width: 450px;
-    max-height: 490px;
     border-radius: 10px;
+
+    height: max(70%,min-width);
+    width: 70%;
+
 }
 
 .CaptionInput{
@@ -96,8 +102,23 @@
 .SubmitButtonContainer{
     display: flex;
     justify-content: center;
+    margin-top: auto;
+    margin-bottom: 30px;
 }
 
 .SubmitButton{
     font-size: 32px;
+}
+.ErrorMsg{
+    color:var(--app-warn);
+    font-size: 24px;
+}
+.TextError{
+    width: 92%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.ErrorMsgSmall{
+    color:var(--app-warn);
+    font-size: 18px;
 }
