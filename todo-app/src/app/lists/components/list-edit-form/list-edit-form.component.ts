@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
 import { GlobalVariablesService } from 'src/app/core/services/global-variables.service';
+import { listDTO } from 'src/app/models/DTOs/listDTO.model';
 import { ColorsList } from 'src/app/models/generic-models/colors.model';
 import { IconsList } from 'src/app/models/generic-models/icons.model';
 import { Theme } from 'src/app/models/types/theme-type.model';
@@ -14,21 +15,25 @@ import { Theme } from 'src/app/models/types/theme-type.model';
     styleUrls: ['./list-edit-form.component.css']
 })
 export class ListEditFormComponent implements OnInit {
-    _theme$!: Observable<Theme>;
-    _listInfoForm!: FormGroup;
+
+    theme$!: Observable<Theme>;
+    listInfoForm!: FormGroup;
+    listToEdit!: listDTO;
+    routeParam!: string;
+
     constructor(
         private global: GlobalVariablesService,
         @Inject(IconsList) public icons: string[],
         @Inject(ColorsList) public colors: string[],
-        private data : DataService,
-        private route : ActivatedRoute,
-        private router : Router
+        private data: DataService,
+        private route: ActivatedRoute,
+        private router: Router
     ) { }
 
-    ngOnInit(): void {
-        this._theme$ = this.global.currentTheme$;
-
-        this._listInfoForm = new FormGroup(
+    async ngOnInit(): Promise<void> {
+        this.theme$ = this.global.currentTheme$;
+        this.routeParam = this.route.snapshot.params.id;
+        this.listInfoForm = new FormGroup(
             {
                 'caption': new FormControl("", [
                     Validators.required
@@ -44,12 +49,31 @@ export class ListEditFormComponent implements OnInit {
                 ]),
             }
         )
+        if (this.routeParam != "-1") {
+            this.listToEdit = await this.data.GetList(this.routeParam);
+
+            this.listInfoForm.setValue({
+                caption: this.listToEdit.caption,
+                description: this.listToEdit.description,
+                icon: this.listToEdit.icon,
+                color: this.listToEdit.color
+            })
+        }
     }
 
-    async Submit(){
-        if(this.route.snapshot.params.id === "-1")
-        {
-            await this.data.CreateList(this._listInfoForm.value)
+    async Submit() {
+        if (this.routeParam === "-1") {
+            await this.data.CreateList(this.listInfoForm.value);
+            this.router.navigate(['lists']);
+        }
+        else {
+            await this.data.EditList({
+                id: this.routeParam,
+                caption: this.listInfoForm.value.caption,
+                description: this.listInfoForm.value.description,
+                icon: this.listInfoForm.value.icon,
+                color: this.listInfoForm.value.color
+            });
             this.router.navigate(['lists'])
         }
     }

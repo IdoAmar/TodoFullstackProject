@@ -1,10 +1,10 @@
-<form [formGroup]="_listInfoForm" (ngSubmit)="Submit()" class="MainContainer">
+<form [formGroup]="listInfoForm" (ngSubmit)="Submit()" class="MainContainer" >
 
 
     <div class="Container">
         <label class="Label" for="Caption">Caption</label>
         <input class="CaptionInput Caption TextContainer" type="text" formControlName="caption">
-        <p class="ErrorMsg TextError" *ngIf="_listInfoForm.controls['caption'].touched && _listInfoForm.controls['caption'].errors?.required">
+        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['caption'].touched && listInfoForm.controls['caption'].errors?.required">
             -Required
         </p>
     </div>
@@ -12,8 +12,9 @@
     <div class="Container">
         <label class="Label" for="Description">Description</label>
         <textarea class="DescriptionTextArea Description TextContainer" type="" formControlName="description">
+            e
         </textarea>
-        <p class="ErrorMsg TextError" *ngIf="_listInfoForm.controls['description'].touched && _listInfoForm.controls['description'].errors?.required">
+        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.required">
             -Required
         </p>
     </div>
@@ -25,13 +26,13 @@
             <mat-form-field class="FormField" style="width: 70px;">
                 <mat-select class="Select IconSelect TextContainer" disableOptionCentering panelClass="iconsPanelClass"
                     disableRipple formControlName="icon">
-                    <mat-option *ngFor="let icon of icons" [ngClass]="(_theme$|async)!" class="Option" value="{{icon}}"
+                    <mat-option *ngFor="let icon of icons" [ngClass]="(theme$|async)!" class="Option" value="{{icon}}"
                         style="font-size:15px;">
                         {{icon}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <p class="ErrorMsgSmall" *ngIf="_listInfoForm.controls['icon'].touched && _listInfoForm.controls['icon'].errors?.required">
+            <p class="ErrorMsgSmall" *ngIf="listInfoForm.controls['icon'].touched && listInfoForm.controls['icon'].errors?.required">
                 -Required
             </p>
         </div>
@@ -40,20 +41,20 @@
             <mat-form-field class="FormField" style="width: 220px">
                 <mat-select class="Select ColorSelect TextContainer" disableOptionCentering
                     panelClass="colorsPanelClass" disableRipple formControlName="color">
-                    <mat-option *ngFor="let color of colors" [ngClass]="(_theme$|async)!" class="Option"
+                    <mat-option *ngFor="let color of colors" [ngClass]="(theme$|async)!" class="Option"
                         value="{{color}}" style="font-size:15px;" [style.color]="color">
                         {{color}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <p class="ErrorMsg" *ngIf="_listInfoForm.controls['color'].touched && _listInfoForm.controls['color'].errors?.required">
+            <p class="ErrorMsg" *ngIf="listInfoForm.controls['color'].touched && listInfoForm.controls['color'].errors?.required">
                 -Required
             </p>
         </div>
     </div>
     <div class="SubmitButtonContainer">
-        <button [disabled]="!_listInfoForm.valid" class="AnimatedButton SubmitButton">
-            Create List
+        <button [disabled]="!listInfoForm.valid" class="AnimatedButton SubmitButton">
+            {{routeParam === "-1" ? "Create List" : "Edit List"}}
         </button>
     </div>
     <!--  Icon and Color pickers -->
