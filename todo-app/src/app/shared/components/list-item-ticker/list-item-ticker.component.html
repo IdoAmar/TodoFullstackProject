@@ -2,7 +2,7 @@
     <mat-icon class="Icon">
         {{currentIcon}}
     </mat-icon>
-    <p [ngClass]="isDisabled? 'DisabledItem' : ''">
+    <p [ngClass]="isDisabled? 'DisabledItem' : ''" class="TextContainer">
         <ng-content></ng-content>
     </p>
 

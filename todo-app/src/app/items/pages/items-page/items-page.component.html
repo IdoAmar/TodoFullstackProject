@@ -1,3 +1,5 @@
 <app-scroll-view>
-    <p>items-page works!</p>
+    <app-list-item-ticker [item]="item" *ngFor="let item of (uncompletedItems$ | async)">
+        {{item.caption}}
+    </app-list-item-ticker>
 </app-scroll-view>

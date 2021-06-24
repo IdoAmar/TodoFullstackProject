@@ -5,7 +5,7 @@
         </app-list-view-widget>
         <div class="ItemsContainer">
             <div class="Seperator"></div>
-            <app-list-item-ticker *ngFor="let item of (itemsList$ | async)">{{item.caption}}</app-list-item-ticker>
+            <app-list-item-ticker [item]="item" *ngFor="let item of (itemsList$ | async)">{{item.caption}}</app-list-item-ticker>
             <app-list-item-adder (newItemEvent)="onItemAdded($event)"></app-list-item-adder>
         </div>
     </div>
