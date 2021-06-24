@@ -29,6 +29,7 @@ namespace TodoApi.Configurations
             builder.HasMany(l => l.ListItems)
                    .WithOne(i => i.List)
                    .HasForeignKey(i => i.ListId)
+                   .IsRequired()
                    .OnDelete(DeleteBehavior.Cascade);
 
         }

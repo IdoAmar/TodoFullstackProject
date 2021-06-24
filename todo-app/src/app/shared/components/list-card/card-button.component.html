@@ -1,12 +1,12 @@
 <button  class="Card">
     <div class="CardContainer">
         <div class="IconContainer">
-            <mat-icon class="Icon">
-                shopping_cart
+            <mat-icon class="Icon" [style.color]="list.color">
+                {{list.icon}} 
             </mat-icon>
         </div>
         <p  class="CardText TextContainer" >
-            Shopping
+            {{list.caption}}
         </p>
     </div>
 </button>

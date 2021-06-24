@@ -1,4 +1,6 @@
-export const IconsList : string[] = [
+import { Icon } from "../types/icon-type.model";
+
+export const IconsList : Icon[] = [
     'star',
     'shopping_cart',
     'home',

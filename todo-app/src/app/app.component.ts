@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { GlobalVariablesService } from './core/services/global-variables.service';
-import { Theme } from './models/theme-type.model';
+import { Theme } from './models/types/theme-type.model';
 import { slideInAnimation } from './shared/animations/routing.animation';
 
 @Component({
