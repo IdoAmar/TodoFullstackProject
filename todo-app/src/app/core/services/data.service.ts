@@ -32,7 +32,6 @@ export class DataService {
     }
 
     CreateList(newListDTO : listDTO) : Promise<listDTO>{
-        console.log(newListDTO);
         
         const headers = {
             'Content-Type': 'application/json',

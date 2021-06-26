@@ -4,7 +4,11 @@
     <div class="Container">
         <label class="Label" for="Caption">Caption</label>
         <input class="CaptionInput Caption TextContainer" type="text" formControlName="caption">
-        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['caption'].touched && listInfoForm.controls['caption'].errors?.required">
+        
+        <p class="ErrorMsg TextError" 
+        *ngIf="(listInfoForm.controls['caption'].dirty || listInfoForm.controls['caption'].touched)
+                && listInfoForm.controls['caption'].errors?.required">
+
             -Required
         </p>
     </div>
@@ -12,17 +16,26 @@
     <div class="Container">
         <label class="Label" for="Description">Description</label>
         <textarea class="DescriptionTextArea Description TextContainer" type="" formControlName="description">
-            e
         </textarea>
-        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.required">
+        
+        <p class="ErrorMsg TextError" 
+        *ngIf="(listInfoForm.controls['description'].dirty || listInfoForm.controls['description'].touched) 
+                && listInfoForm.controls['description'].errors?.required">
+
             -Required
         </p>
         
-        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.minlength">
+        <p class="ErrorMsg TextError" 
+        *ngIf="(listInfoForm.controls['description'].dirty || listInfoForm.controls['description'].touched) 
+                && listInfoForm.controls['description'].errors?.minlength">
+
             -Description should have atleast 30 characters
         </p>
 
-        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.validateWordsError">
+        <p class="ErrorMsg TextError"
+        *ngIf="(listInfoForm.controls['description'].dirty || listInfoForm.controls['description'].touched) 
+                && listInfoForm.controls['description'].errors?.validateWordsError">
+
             -Description should have atleast 10 words
         </p>
     </div>
@@ -40,7 +53,11 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <p class="ErrorMsgSmall" *ngIf="listInfoForm.controls['icon'].touched && listInfoForm.controls['icon'].errors?.required">
+
+            <p class="ErrorMsgSmall" 
+            *ngIf="(listInfoForm.controls['icon'].dirty || listInfoForm.controls['icon'].touched) 
+                    && listInfoForm.controls['icon'].errors?.required">
+
                 -Required
             </p>
         </div>
@@ -55,7 +72,11 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-            <p class="ErrorMsg" *ngIf="listInfoForm.controls['color'].touched && listInfoForm.controls['color'].errors?.required">
+
+            <p class="ErrorMsg" 
+            *ngIf="(listInfoForm.controls['color'].dirty || listInfoForm.controls['color'].touched) 
+                    && listInfoForm.controls['color'].errors?.required">
+                    
                 -Required
             </p>
         </div>

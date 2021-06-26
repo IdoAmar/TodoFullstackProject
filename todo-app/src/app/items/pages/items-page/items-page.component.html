@@ -1,5 +1,17 @@
 <app-scroll-view>
-    <app-list-item-ticker [item]="item" *ngFor="let item of (uncompletedItems$ | async)">
-        {{item.caption}}
-    </app-list-item-ticker>
+    <div *ngIf="(uncompletedItems$ | async) as uncompletedItems; else elseBlock">
+        <app-list-item-ticker [item]="item" *ngFor="let item of uncompletedItems">
+            {{item.caption}}
+        </app-list-item-ticker>
+    </div>
+    <ng-template #elseBlock>
+        <div class="DoneMessageContainer">
+            <mat-icon class="Icon">
+                done
+            </mat-icon>
+            <p class="Message">
+                All done
+            </p>
+        </div>
+    </ng-template>
 </app-scroll-view>
