@@ -5,7 +5,16 @@
     display: grid;
 }
 
+.HomeContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
 .TitleContainer{
+    grid-row: 1/2;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto , 4);
@@ -17,6 +26,9 @@
     transition: var(--app-transition-time);
 }
 
+.StatusDisplayer{
+    grid-row: 2/3;
+}
 
 h1{
     font-size: 46px;

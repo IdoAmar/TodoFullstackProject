@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, MaxLengthValidator, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
@@ -8,6 +8,7 @@ import { listDTO } from 'src/app/models/DTOs/listDTO.model';
 import { ColorsList } from 'src/app/models/generic-models/colors.model';
 import { IconsList } from 'src/app/models/generic-models/icons.model';
 import { Theme } from 'src/app/models/types/theme-type.model';
+import { maxWordsValidator } from 'src/app/Validators/max-words.validator';
 
 @Component({
     selector: 'app-list-edit-form',
@@ -39,7 +40,9 @@ export class ListEditFormComponent implements OnInit {
                     Validators.required
                 ]),
                 'description': new FormControl("", [
-                    Validators.required
+                    Validators.required,
+                    Validators.minLength(30),
+                    maxWordsValidator(10)
                 ]),
                 'icon': new FormControl("", [
                     Validators.required

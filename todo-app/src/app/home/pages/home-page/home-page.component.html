@@ -1,5 +1,6 @@
 <app-scroll-view>
-   <div class="TitleContainer">
+   <div class="HomeContainer">
+       <div class="TitleContainer">
        <h1>Todos app</h1>
        <h2>by Ido Amar</h2>
        <h3> 16/06/2021 </h3>
@@ -8,5 +9,9 @@
            <app-arrow-animated-button (click)="onViewListsClicked()">View all lists</app-arrow-animated-button>
            <app-arrow-animated-button (click)="onViewItemsClicked()">View all items</app-arrow-animated-button>
        </div>
+    </div>
+    <app-status-displayer class="StatusDisplayer">
+       
+    </app-status-displayer>
    </div>
 </app-scroll-view>

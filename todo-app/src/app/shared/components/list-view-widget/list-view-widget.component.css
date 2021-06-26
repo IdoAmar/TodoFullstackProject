@@ -2,6 +2,8 @@
     display: flex;
     background-color: var(--app-primary-medium-low);
     justify-content: left;
+    transition: var(--app-transition-time);
+
 }
 .Icon{
     width: fit-content;

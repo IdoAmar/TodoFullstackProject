@@ -1,9 +1,22 @@
-<div  class="Conatiner">
+<div class="Conatiner">
     <mat-icon class="Icon">
         check_box_outline_blank
     </mat-icon>
-    <input #itemText type="text">
-    <button class="AnimatedButton AddButton" (click)="onItemAdded(itemText.value)" >
-        add
-    </button>
+    <form class="FormContainer" [formGroup]="addItemForm" (ngSubmit)="onItemAdded()">
+        <input #itemText type="text" formControlName="caption">
+        <button class="AnimatedButton AddButton" [disabled]="!addItemForm.valid">
+            add
+        </button>
+    </form>
+    <div class="ErrorContainer">
+        <p class="ErrorMsg TextContainer"
+            *ngIf="(addItemForm.controls['caption'].dirty || addItemForm.controls['caption'].touched) && addItemForm.controls['caption'].errors?.minlength">
+            -Caption should have atleast 10 characters
+        </p>
+
+        <p class="ErrorMsg TextContainer"
+            *ngIf="(addItemForm.controls['caption'].dirty  || addItemForm.controls['caption'].touched) && addItemForm.controls['caption'].errors?.validateWordsError">
+            -Caption should have atleast 3 words
+        </p>
+    </div>
 </div>

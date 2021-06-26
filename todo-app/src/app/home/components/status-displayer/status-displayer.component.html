@@ -1,0 +1,35 @@
+<div class="DisplayerContainer">
+    <mat-icon class="DisplayerIcon">
+        list
+    </mat-icon>
+    <p class="DisplayerNumber">
+        {{(listsCount | async)}}
+    </p>
+    <div class="DisplayerText">
+        Lists
+    </div>
+</div>
+
+<div class="DisplayerContainer">
+    <mat-icon  class="DisplayerIcon">
+        done_all 
+    </mat-icon>
+    <p class="DisplayerNumber">
+        {{(listItemsCount | async)}}
+    </p>
+    <div class="DisplayerText">
+        Items
+    </div>
+</div>
+
+<div class="DisplayerContainer">
+    <mat-icon class="DisplayerIcon">
+        hourglass_empty
+    </mat-icon>
+    <p class="DisplayerNumber">
+        {{(uncompletedItemsCount | async)}}
+    </p>
+    <div class="DisplayerText">
+        Active items
+    </div>
+</div>

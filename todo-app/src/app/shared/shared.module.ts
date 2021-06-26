@@ -14,6 +14,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { ListViewWidgetComponent } from './components/list-view-widget/list-view-widget.component';
 import { ListItemTickerComponent } from './components/list-item-ticker/list-item-ticker.component';
 import { ListItemAdderComponent } from './components/list-item-adder/list-item-adder.component';
+import { UrlPresenterComponent } from './components/url-presenter/url-presenter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,12 +31,14 @@ import { ListItemAdderComponent } from './components/list-item-adder/list-item-a
     ListViewWidgetComponent,
     ListItemTickerComponent,
     ListItemAdderComponent,
+    UrlPresenterComponent,
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   exports:[
     TextButtonAnimationDirective,
@@ -45,9 +49,12 @@ import { ListItemAdderComponent } from './components/list-item-adder/list-item-a
     TextButtonComponent,
     ThemeTogglerComponent,
     ListViewWidgetComponent,
+    MatIconModule,
     MatSelectModule,
     ListItemTickerComponent,
     ListItemAdderComponent,
+    UrlPresenterComponent,
+
   ]
 })
 export class SharedModule { }

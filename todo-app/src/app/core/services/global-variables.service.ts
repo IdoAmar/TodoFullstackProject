@@ -9,7 +9,7 @@ import { CoreModule } from '../core.module';
 export class GlobalVariablesService {
     private _currentTheme : Theme = 'darkTheme';
     private _currentTheme$ : BehaviorSubject<Theme> = new BehaviorSubject<Theme>(this._currentTheme);
-
+    private _currentHeader$ : BehaviorSubject<string> = new BehaviorSubject<string>("");
     constructor() { }
 
     get currentTheme$() : Observable<Theme>{
@@ -29,4 +29,10 @@ export class GlobalVariablesService {
         }
     }
 
+    get currentHeader$() : Observable<string>{
+        return this._currentHeader$.asObservable();
+    }
+    ChangeHeader(newHeader : string) : void {
+        this._currentHeader$.next(newHeader);
+    }
 }

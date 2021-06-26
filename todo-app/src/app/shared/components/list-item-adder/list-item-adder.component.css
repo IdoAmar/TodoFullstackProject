@@ -1,7 +1,8 @@
 :host{
-    display: flex;
+    display: grid;
     background-color: var(--app-primary-medium-low);
     border-bottom: 1px solid var(--app-main-foreground);
+    transition: var(--app-transition-time);
 }
 
 .Conatiner{
@@ -11,24 +12,31 @@
     border: none;
     background-color: transparent;
     color: var(--app-main-foreground);
-}
 
+}
+.FormContainer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
 .Icon{
     align-self: center;
     width: 28px;
     height: 28px;
     font-size: 28px;
     margin-right: 20px;
+    transition: var(--app-transition-time);
+    
 }
 
 input{
     font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    align-self: center;
 }
 .AddButton{
-    margin-top: 7px;
-    margin-bottom: 7px;
     font-size: 24px;
     font-family: "Material Icons";
+}
+.ErrorMsg{
+    font-size: 20px;
 }

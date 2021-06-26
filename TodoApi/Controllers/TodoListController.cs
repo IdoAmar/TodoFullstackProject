@@ -41,6 +41,12 @@ namespace TodoApi.Controllers
             return Ok(listsDTOs);
         }
 
+        [HttpGet("count")]
+        public async Task<ActionResult<int>> GetAllListsCount()
+        {
+            return Ok(await _todoRepo.GetAllListsCount());
+        }
+
         [HttpGet("{listId}")]
         public async Task<ActionResult<TodoListDTO>> GetList(Guid listId)
         {

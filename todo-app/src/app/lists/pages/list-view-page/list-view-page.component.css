@@ -6,6 +6,7 @@
 
 .Seperator{
     border-bottom: 1px solid var(--app-main-foreground);
+    transition: var(--app-transition-time);
 }
 
 .ItemsContaier{

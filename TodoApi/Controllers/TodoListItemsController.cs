@@ -24,6 +24,11 @@ namespace TodoApi.Controllers
             _todoRepo = todoRepo;
 
         }
+        [HttpGet("count")]
+        public async Task<ActionResult<int>> GetAllListItemsCount()
+        {
+            return Ok(await _todoRepo.GetAllListItemsCount());
+        }
 
         [HttpGet("uncompleted")]
         public async Task<ActionResult<IEnumerable<TodoListItemDTO>>> GetAllUncompletedItems()
@@ -38,6 +43,11 @@ namespace TodoApi.Controllers
                 uncompletedItems.Select(i => ListItemConverter.ToTodoListItemDTO(i));
 
             return Ok(uncompletedItemsDTOs);
+        }
+        [HttpGet("uncompleted/count")]
+        public async Task<ActionResult<int>> GetAllUncompletedItemsCount()
+        {
+            return (await _todoRepo.GetAllUncompletedItemsCount());
         }
 
         [HttpGet]

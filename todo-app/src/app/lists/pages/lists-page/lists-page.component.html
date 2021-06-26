@@ -1,6 +1,10 @@
 <app-scroll-view>
     <div class="GridContainer">
         <!-- need to add output to app-card for it to work -->
-        <app-card-button *ngFor="let listDTO of (_lists$ | async)" (click)="CardClicked(listDTO)" [list]="listDTO"></app-card-button>
+        <app-card-button *ngFor="let listDTO of (_lists$ | async)" (click)="CardClicked(listDTO)" [list]="listDTO">
+        </app-card-button>
+        <app-card-button [isAdder]="true" (click)="CardAdderClicked()">
+
+        </app-card-button>
     </div>
 </app-scroll-view>

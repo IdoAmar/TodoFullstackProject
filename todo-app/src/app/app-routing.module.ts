@@ -5,14 +5,17 @@ import { ItemsPageComponent } from './items/pages/items-page/items-page.componen
 import { ListEditPageComponent } from './lists/pages/list-edit-page/list-edit-page.component';
 import { ListViewPageComponent } from './lists/pages/list-view-page/list-view-page.component';
 import { ListsPageComponent } from './lists/pages/lists-page/lists-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { ListsPageGuard } from './shared/guards/lists-page.guard';
 
 const routes: Routes = [
     {path:"home",component: HomePageComponent, data: {animation : 'homePage'}},
-    {path:"lists",component: ListsPageComponent, data : {animation : 'listsPage'}},
+    {path:"lists",component: ListsPageComponent, data : {animation : 'listsPage'} , canActivate : [ListsPageGuard]},
     {path:"lists/:id",component: ListViewPageComponent, data : {animation:'listViewPage'}},
     {path:"lists/:id/edit",component: ListEditPageComponent, data: {animation : 'listEditPage'}},
     {path:"items",component: ItemsPageComponent, data : {animation : 'itemsPage'}},
-    {path:'', redirectTo:'/home', pathMatch: 'full'}
+    {path:'', redirectTo:'/home', pathMatch: 'full'},
+    {path:'**', component: ErrorPageComponent}
 ];
 
 @NgModule({

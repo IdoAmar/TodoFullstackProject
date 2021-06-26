@@ -10,13 +10,15 @@ import { ListsModule } from './lists/lists.module';
 import { ItemsModule } from './items/items.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TitleComponent } from './components/title/title.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     
     NavBarComponent,
-    TitleComponent
+    TitleComponent,
+    ErrorPageComponent
   
   ],
   imports: [

@@ -82,4 +82,19 @@ export class DataService {
         const requestUrl = this._baseUrl + this._listItemsControllerPrefix + listItemID;
         return this.http.patch<listItemDTO>(requestUrl,{}).toPromise();
     }
+
+    GetAllListsCount() : Promise<number>{
+        const requestUrl = this._baseUrl + this._listControllerPrefix + "count";
+        return this.http.get<number>(requestUrl).toPromise();
+    }
+
+    GetAllListItemsCount() : Promise<number>{
+        const requestUrl = this._baseUrl + this._listItemsControllerPrefix + "count";
+        return this.http.get<number>(requestUrl).toPromise();
+    }
+
+    GetAllUncompletedItemsCount() : Promise<number>{
+        const requestUrl = this._baseUrl + this._listItemsControllerPrefix + "uncompleted/count"
+        return this.http.get<number>(requestUrl).toPromise();
+    }
 }

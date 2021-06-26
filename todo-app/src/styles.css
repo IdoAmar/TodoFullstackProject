@@ -7,7 +7,7 @@
     --app-primary-medium-high: #444444;
     --app-primary-medium: #555555;
     --app-primary-medium-low:#888888;
-    --app-primary-low:#aaaaaa;
+    --app-primary-low:#9e9e9e;
     --app-primary-lower:#cccccc;
 
     --app-accent-transparent:#ffa7b644 ;
@@ -34,7 +34,7 @@
     --app-primary-high:#9c9c9c;
     --app-primary-medium-high: #9e9e9e;
     --app-primary-medium:#d1d1d1;
-    --app-primary-medium-low: #e2e2e2 ;
+    --app-primary-medium-low: #e9e9e9 ;
     --app-primary-low: #ffffff;
     --app-primary-lower:#ffffff;
 
@@ -225,7 +225,6 @@ input:focus, textarea:focus{
     background-color: var(--app-accent-dark);
     color: var(--app-mid-foreground)
 }
-/* Button styles */
 
 .WarnButton{
     background-color: var(--app-warn);
@@ -251,3 +250,18 @@ input:focus, textarea:focus{
     background-color: var(--app-warn-dark);
     color: var(--app-mid-foreground)
 }
+/* Button styles */
+
+/* Error styles */
+.ErrorMsg{
+    color:var(--app-warn);
+}
+.TextError{
+    width: 92%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.ErrorMsgSmall{
+    color:var(--app-warn);
+}
+/* Error styles */

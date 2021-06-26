@@ -109,16 +109,10 @@
 .SubmitButton{
     font-size: 32px;
 }
+
 .ErrorMsg{
-    color:var(--app-warn);
-    font-size: 24px;
-}
-.TextError{
-    width: 92%;
-    margin-left: 8%;
-    margin-right: 8%;
+    font-size: 24px ;
 }
 .ErrorMsgSmall{
-    color:var(--app-warn);
     font-size: 18px;
 }

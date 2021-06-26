@@ -81,16 +81,32 @@ namespace TodoApi.Services
             return todoList;
         }
 
+        public async Task<int> GetAllListItemsCount()
+        {
+            return  await _dbContext.TodoListItems.CountAsync();
+        }
+
         public async Task<IEnumerable<TodoList>> GetAllLists()
         {
             IEnumerable<TodoList> lists = await _dbContext.TodoLists.ToListAsync();
             return lists;
         }
 
+        public async Task<int> GetAllListsCount()
+        {
+            return await _dbContext.TodoLists.CountAsync();
+        }
+
         public async Task<IEnumerable<TodoListItem>> GetAllUncompletedItems()
         {
             return await _dbContext.TodoListItems.Where(i => i.IsDone == false)
                                                  .ToListAsync();
+        }
+
+        public async Task<int> GetAllUncompletedItemsCount()
+        {
+            return (await GetAllUncompletedItems()).Count();
+
         }
 
         public async Task<TodoList> GetList(Guid listId)

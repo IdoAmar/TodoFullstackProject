@@ -1,0 +1,14 @@
+
+.ErrorContainer{
+    display: flex;
+    justify-content: center;
+    color: var(--app-warn-dark);
+    margin-top: 30px;
+    transition: var(--app-transition-time);
+}
+
+.ErrorIcon{
+    width: auto;
+    height: auto;
+    font-size: 50px;
+}

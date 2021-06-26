@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
+import { GlobalVariablesService } from 'src/app/core/services/global-variables.service';
 import { ListCacheService } from 'src/app/core/services/list-cache.service';
 import { listDTO } from 'src/app/models/DTOs/listDTO.model';
 import { listItemDTO } from 'src/app/models/DTOs/listItemDTO.model';
@@ -22,7 +23,8 @@ export class ListViewPageComponent implements OnInit, OnDestroy {
     constructor(
         private listCache : ListCacheService,
         private data : DataService,
-        private route : ActivatedRoute) { }
+        private route : ActivatedRoute,
+        private global : GlobalVariablesService) { }
 
     ngOnInit(): void{
 
@@ -37,6 +39,9 @@ export class ListViewPageComponent implements OnInit, OnDestroy {
         else{
             this.list$ = this.data.GetList(this._listId);
         }
+        
+        this.list$.then( l => this.global.ChangeHeader("Lists > " + l.caption));
+
         this.itemsList$ = this.itemsListCache$.asObservable();
         this.getListSubscription = this.data.GetListItems(this._listId)
                                     .subscribe(i => {

@@ -17,6 +17,14 @@
         <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.required">
             -Required
         </p>
+        
+        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.minlength">
+            -Description should have atleast 30 characters
+        </p>
+
+        <p class="ErrorMsg TextError" *ngIf="listInfoForm.controls['description'].touched && listInfoForm.controls['description'].errors?.validateWordsError">
+            -Description should have atleast 10 words
+        </p>
     </div>
 
     <!--  Icon and Color pickers -->

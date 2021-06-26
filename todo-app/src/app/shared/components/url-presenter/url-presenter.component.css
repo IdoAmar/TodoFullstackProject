@@ -1,0 +1,13 @@
+:host{
+    width: 100%;
+    display: grid;
+}
+.HeaderText{
+    padding-left: 10px;
+    border-top: 1px solid var(--app-main-foreground);
+    border-bottom: 1px solid var(--app-main-foreground);
+    color: var(--app-main-foreground);
+    background-color: var(--app-primary-medium);
+    transition: var(--app-transition-time);
+
+}

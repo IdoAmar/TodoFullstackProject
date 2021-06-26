@@ -2,6 +2,7 @@
     display: flex;
     background-color: var(--app-primary-medium-low);
     border-bottom: 1px solid var(--app-main-foreground);
+    transition: var(--app-transition-time);
 }
 
 .ButtonContainer{
@@ -11,6 +12,7 @@
     border: none;
     background-color: transparent;
     color: var(--app-main-foreground);
+
 }
 
 .ButtonContainer:disabled{
@@ -20,7 +22,6 @@
     -webkit-text-decoration-line: line-through; /* Safari */
     text-decoration-line: line-through;
     text-decoration-color: var(--app-warn-dark);
-
 }
 
 .Icon{

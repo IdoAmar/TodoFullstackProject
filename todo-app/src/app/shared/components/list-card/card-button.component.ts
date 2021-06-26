@@ -9,7 +9,7 @@ import { Icon } from 'src/app/models/types/icon-type.model';
   styleUrls: ['./card-button.component.css']
 })
 export class ListCardComponent implements OnInit {
-
+    @Input() isAdder : boolean = false;
     @Input() list! : listDTO;
     
   constructor() { }
