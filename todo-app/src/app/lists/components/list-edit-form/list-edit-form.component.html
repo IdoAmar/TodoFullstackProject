@@ -66,6 +66,9 @@
             <mat-form-field class="FormField" style="width: 220px">
                 <mat-select class="Select ColorSelect TextContainer" disableOptionCentering
                     panelClass="colorsPanelClass" disableRipple formControlName="color">
+                    <mat-select-trigger class="SelectTrigger TextContainer" [style.color]="listInfoForm.controls['color'].value">
+                        {{listInfoForm.controls['color'].value}}
+                    </mat-select-trigger>
                     <mat-option *ngFor="let color of colors" [ngClass]="(theme$|async)!" class="Option"
                         value="{{color}}" style="font-size:15px;" [style.color]="color">
                         {{color}}
