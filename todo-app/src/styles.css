@@ -73,6 +73,12 @@ html, body {
     font-size: 32px;
 }
 
+*::selection{
+    color: var(--app-nocontrast-white-foreground);
+    background-color: var(--app-accent-light);
+}
+
+
 .TextContainer{
     padding-bottom: 0.25em;
 }

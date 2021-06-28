@@ -48,7 +48,6 @@ export class ListViewPageComponent implements OnInit, OnDestroy {
                                         this.itemsList = i;
                                         this.itemsListCache$.next(i)
                                     });
-
     }
 
     ngOnDestroy(): void {

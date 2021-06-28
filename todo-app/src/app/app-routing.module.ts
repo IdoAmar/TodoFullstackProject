@@ -6,7 +6,7 @@ import { ListEditPageComponent } from './lists/pages/list-edit-page/list-edit-pa
 import { ListViewPageComponent } from './lists/pages/list-view-page/list-view-page.component';
 import { ListsPageComponent } from './lists/pages/lists-page/lists-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { ListsPageGuard } from './shared/guards/lists-page.guard';
+import { ListsPageGuard } from './core/guards/lists-page.guard';
 
 const routes: Routes = [
     {path:"home",component: HomePageComponent, data: {animation : 'homePage'}},

@@ -11,10 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TextButtonComponent } from './components/text-button/text-button.component';
 import { ThemeTogglerComponent } from './components/toggler/toggler.component';
 import {MatSelectModule} from '@angular/material/select';
-import { ListViewWidgetComponent } from './components/list-view-widget/list-view-widget.component';
 import { ListItemTickerComponent } from './components/list-item-ticker/list-item-ticker.component';
 import { ListItemAdderComponent } from './components/list-item-adder/list-item-adder.component';
-import { UrlPresenterComponent } from './components/url-presenter/url-presenter.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -28,10 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ShortcutButtonComponent,
     TextButtonComponent,
     ThemeTogglerComponent,
-    ListViewWidgetComponent,
     ListItemTickerComponent,
     ListItemAdderComponent,
-    UrlPresenterComponent,
   ],
   imports: [
     CommonModule,
@@ -43,17 +39,16 @@ import { ReactiveFormsModule } from '@angular/forms';
   exports:[
     TextButtonAnimationDirective,
 
+    MatIconModule,
+    MatSelectModule,
+
     ListCardComponent,
     ScrollViewComponent,
     ShortcutButtonComponent,
     TextButtonComponent,
     ThemeTogglerComponent,
-    ListViewWidgetComponent,
-    MatIconModule,
-    MatSelectModule,
     ListItemTickerComponent,
     ListItemAdderComponent,
-    UrlPresenterComponent,
 
   ]
 })

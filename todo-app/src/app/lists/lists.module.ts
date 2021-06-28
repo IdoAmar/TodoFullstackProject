@@ -6,6 +6,7 @@ import { ListEditPageComponent } from './pages/list-edit-page/list-edit-page.com
 import { ListEditFormComponent } from './components/list-edit-form/list-edit-form.component';
 import { ListViewPageComponent } from './pages/list-view-page/list-view-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListViewWidgetComponent } from './components/list-view-widget/list-view-widget.component';
 
 
 
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       ListEditPageComponent,
       ListEditFormComponent,
       ListViewPageComponent,
+      ListViewWidgetComponent
   ],
   imports: [
     CommonModule,

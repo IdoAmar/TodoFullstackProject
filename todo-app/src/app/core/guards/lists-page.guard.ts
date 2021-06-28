@@ -3,9 +3,10 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DataService } from 'src/app/core/services/data.service';
+import { CoreModule } from '../core.module';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: CoreModule
 })
 export class ListsPageGuard implements CanActivate {
 
