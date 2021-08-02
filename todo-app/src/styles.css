@@ -61,7 +61,6 @@
 html, body { 
     height: 100%;
     width: 100%;
-
  }
  
 *{
@@ -83,30 +82,30 @@ html, body {
     padding-bottom: 0.25em;
 }
 /* overriding panel classes for google's material select */
-.iconsPanelClass{
+/* .iconsPanelClass{
     margin-top: 1.75em;
     margin-left: 0.5em;
     padding: 0;
     width: 70px;
     height: fit-content;
-}
-.iconsPanelClass .mat-option , .colorsPanelClass .mat-option{
+} */
+/* .iconsPanelClass .mat-option , .colorsPanelClass .mat-option{
     background-color: transparent;
     padding: 0;
     margin: 0;
 
-}
+} */
 .iconsPanelClass .mat-option-text{
     font-family:'Material Icons';
     text-align: center;
 }
 
-.colorsPanelClass{
+/* .colorsPanelClass{
     margin-top: 1.75em;
     margin-left: 0.5em;
     width: 220px;
-}
-.cdk-overlay-pane{
+} */
+/* .cdk-overlay-pane{
     min-width: 0px !important;
     min-height: 0px !important;
     width: 0;
@@ -119,11 +118,11 @@ html, body {
     display: grid;
     height: 100%;
     width: 100%;
-}
-.cdk-live-announcer-element{
+} */
+/* .cdk-live-announcer-element{
     width: 0;
     height: 0;
-}
+} */
 /* overriding panel classes for google's material select */
 
 
@@ -132,10 +131,10 @@ html, body {
     padding: 0px;
     border:none;
 }
-
+/* 
 .mat-form-field-label-wrapper {
     padding: 0px;
-}
+} */
 
  .mat-select-trigger {
     min-width: fit-content;
@@ -143,9 +142,9 @@ html, body {
 
 }
 
-.mat-select-panel {
+/* .mat-select-panel {
     min-width:fit-content !important;
-}
+} */
 
 .IconSelect .mat-select-min-line {
     font-family:'Material Icons';
